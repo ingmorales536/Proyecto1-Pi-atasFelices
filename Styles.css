@@ -1,0 +1,254 @@
+*{ /* Quita margin y padding a todo el documento de un chingadazo */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+
+    /*Declaracion de variables*/
+    --Colorfon1: rgb(250, 212, 221);
+
+}
+
+/*Diseño de la barra de navegacion*/
+.top-bar {
+    background-color: #F195B2; 
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322);
+}
+
+.top-bar h3 {
+    color: rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/* Estilos para los elementos de la navegación */
+.Items-Navegacion {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 25%;
+    padding: 0;
+    display: flex;
+    /*flex-wrap: wrap;  Permite que los elementos se muevan a la siguiente línea si es necesario */
+}
+
+.Items-Navegacion li {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.Items-Navegacion li:last-child {
+    margin-right: 80px;
+}
+
+.Items-Navegacion a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #000000; 
+    font-family: Verdana, Geneva, sans-serif;/* Fuente de letra (opcional) */
+}
+
+.Items-Navegacion a:hover {
+    transition: all .3s ease-in-out;
+    color: rgb(170, 78, 150);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen verticalmente */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        padding: 3px;
+    }
+
+    .top-bar h2 {
+        margin-bottom: 10px; /* Espacio entre el título y los elementos de navegación */
+    }
+
+    .Items-Navegacion {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: space-around; /* Distribuye uniformemente los elementos */
+        padding: 0;
+        
+    }
+
+    .Items-Navegacion li {
+        margin-right: 12px; /* Quita el margen derecho de los items */
+        margin-bottom: 5px; /* Agrega un margen inferior entre los elementos */
+       
+        
+    }
+
+    .Items-Navegacion li:last-child {
+        margin-bottom: 0; /* Quita el margen inferior del último elemento */
+        
+    }
+
+    .Items-Navegacion a {
+        font-size: 16px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+}
+
+/*Final de Contenido de los items(Barra superior) */
+
+/*Segunda barra de navegacion*/
+.navbar {
+    position: fixed; /* o relative, fixed, sticky */
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 20px;
+    z-index: 1000; /* Nivel alto para estar por encima */
+    border-radius: 40px;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322); 
+    transition: top 0.2s ease-in-out;
+}
+.navbar.pegada{
+    top:10%;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 8px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.logo-container {
+    width: 100px; 
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+/* Fin Segunda barra de navegacion*/
+
+
+/*Diseño de portada*/
+.Portada {
+        background-image: url('Img/PortadaPrincipal.png'); /* Ruta de la imagen */
+        background-size: cover; /* La imagen cubre todo el contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        width: 100vw; /* Ancho completo de la ventana */
+        height: 100vh; /* Altura completa de la ventana */
+        margin-top: 100px;
+}
+
+/* pantallas mas grandes */
+@media (min-width: 1438px) {
+    .Portada {
+        height: 100vh; /* Ajusta la altura para pantallas extra grandes */
+    }
+}
+
+/* pantallas grandes (PC y laptops) */
+@media (min-width: 1024px) and (max-width: 1437px) {
+    .Portada {
+        height: 74vh; /* Ajusta la altura para pantallas grandes */
+    }
+}
+
+
+/* pantallas medianas (Tabletas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .Portada {
+        height: 50vh; 
+    }
+}
+
+/* pantallas medianas-pequeñas  */
+@media (min-width: 600px) and (max-width: 767px) {
+    .Portada {
+        height: 40vh;
+    }
+}
+
+/* pantallas pequeñas (Teléfonos) */
+@media (max-width: 599px) {
+    .Portada {
+        height: 30vh;
+        width: 100%; 
+                   
+        background-position: top; /* Ajusta la posición de la imagen */
+    }
+}
+/*fin Diseño de portada*/
+
+/*
+rgb(250, 212, 221)   Color como rosita bajo
+
+*/
+
+/* pantallas grandes (PC y laptops) */
+@media (min-width: 1024px) {
+    .Galeria h2 {
+        font-size: 60px /* Ajusta la altura para pantallas grandes */
+    }
+}
+
+
+/* Aqui inicia todo lo relacionado con las principales pinatas que se muestran en el inicio */
+
+.carrusel{ 
+    margin-top: 100px;
+    border-radius: 20px;
+    display: inline-flex;
+    width: 90vw;
+    height: 500px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    justify-content:space-around;
+    background-color:rgb(250, 212, 221);
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    padding-bottom: 200px;
+    position: relative;
+    
+}
+.prin-pinata{
+    background-color:rgb(250, 212, 221);
+    border-radius: 10%;
+    width: 30%;
+    height: 300px;
+    
+
+}
+
+.h2-pinrtrabajos{
+    text-align: center;
+    margin: 0px;
+    padding-top: 20px;
+    background-color: rgb(205, 243, 240);
+    font-size: 50px;
+    position: absolute;
+    width: 100vw;
+    height: 350px;
+
+}

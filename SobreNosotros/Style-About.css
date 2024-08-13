@@ -1,0 +1,374 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*Diseño de la barra de navegacion*/
+.top-bar h1 {
+    color: white;
+    
+}
+
+.top-bar {
+    background-color: #F195B2; 
+    color: white;
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322);
+}
+
+.top-bar h3 {
+    color: rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 10px;
+}
+
+.top-bar img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px;
+}
+
+/* Mejorar esta parte 26/07/24 */
+.top-bar img:hover{
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    background-color:#0000002c;
+    transition: 0.3s;
+}
+
+/* Estilos para los elementos de la navegación */
+.Items-Navegacion { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+}
+
+.Items-Navegacion li {
+    margin-right: 20px;
+}
+
+.Items-Navegacion li:last-child {
+    margin-right: 45px;
+}
+
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 499px) {
+    .top-bar {
+       display: flex;
+        
+    }
+
+    .Items-Navegacion {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: space-around; /* Distribuye uniformemente los elementos */
+    }
+
+    .Items-Navegacion li {
+        margin-right: 0px; /* Quita el margen derecho de los items */
+        margin-bottom: 5px; /* Agrega un margen inferior entre los elementos */
+       
+        
+    }
+
+    .Items-Navegacion li:last-child {
+        margin-bottom: 0; /* Quita el margen inferior del último elemento */
+        
+    }
+
+    .Items-Navegacion a {
+        font-size: 20px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+
+    .top-bar img {
+        margin-top: -10px;
+        width: 35px;
+        margin-left: 13px;
+    }
+
+    .top-bar img:hover{
+        width: 35px;
+    }
+
+    .top-bar h3 {
+        font-size: 15px;
+        margin-top: -2px;
+        margin-left: 5px;
+    }
+
+}
+
+/*Final de Contenido de los items(Barra superior) */
+
+/*Segunda barra de navegacion*/
+.navbar {
+    position: absolute; /* o relative, fixed, sticky */
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    z-index: 1000; /* Nivel alto para estar por encima */
+    border-radius: 40px;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322); 
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 8px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.logo-container {
+    width: 116px;
+    height: 130px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+
+.navbar :hover {
+    transition: all .3s ease-in-out;
+    color:#e01958; 
+}
+
+/* pantalla para celulares medianos-grandes*/
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 13px;
+    }
+    .navbar {
+        margin-top: 10px;
+        width: 85%;
+        height: 30px;
+    }
+}
+/* pantalla para celulares pequeños*/
+@media (max-width: 499) {
+    .navbar a {
+        font-size:8px;
+    }
+    .navbar {
+        margin-top: 50px;
+        width: 85%;
+        height: 30px;
+    }
+
+    .logo-container img {
+        size: 10px;
+        width: 10px;
+        height: 100px;
+    }
+}
+/* Fin Segunda barra de navegacion*/
+
+
+
+
+
+
+
+/*Diseño de portada*/
+.PortadaSobreNosotros {
+    background-image: url('../Img/PortadaSobreNosotros.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.9); /* Añade un filtro para suavizar la imagen */
+    box-shadow: 0px 2px 1px rgb(88, 88, 88);
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+/* pantallas mas grandes */
+@media (min-width: 1438px) {
+.PortadaSobreNosotros {
+    height: 80vh; /* Ajusta la altura para pantallas extra grandes */
+}
+}
+
+/* pantallas grandes (PC y laptops) */
+@media (min-width: 1024px) and (max-width: 1437px) {
+.PortadaSobreNosotros {
+    height: 80vh; /* Ajusta la altura para pantallas grandes */
+}
+}
+
+
+/* pantallas medianas (Tabletas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+.PortadaSobreNosotros {
+    height: 50vh; 
+}
+}
+
+/* pantallas medianas-pequeñas  */
+@media (min-width: 600px) and (max-width: 767px) {
+.PortadaSobreNosotros {
+    height: 40vh;
+    
+}
+}
+
+/* pantallas pequeñas (Teléfonos) */
+@media (max-width: 599px) {
+.PortadaSobreNosotros {
+    height: 30vh;
+    width: 100%; 
+    margin-top: 115px;
+    filter: brightness(0.9); /* Añade un filtro para suavizar la imagen */
+    box-shadow: 0px 2px 1px rgb(75, 75, 75);
+}
+}
+/*fin Diseño de portada*/
+
+/*Diseño del pie*/
+.Pie {
+    margin-top: 100px;
+    background-color: #f082a5; 
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 0px 6px black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Foot-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo-section {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+}
+
+.links-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.links-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}
+
+.links-section ul :hover {
+    color: black;
+}
+
+.Iconos-RedesSociales a {
+    margin: 0 10px;
+}
+
+.Iconos-RedesSociales img {
+    width: 37px;
+    height: auto;
+}
+
+@media (max-width: 756px) {
+    .Foot-Container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links-section ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Iconos-RedesSociales {
+        margin-top: 15px;
+    }
+
+    
+    .Iconos-RedesSociales img {
+        width: 37px;
+    }
+}
+
+
+@media (max-width: 499px) {
+    .links-section a {
+        font-size: 14px;
+    }
+
+    .Iconos-RedesSociales img {
+        width: 37px;
+    }
+}
+
+
+/* Informacion Acerca de nosotros */
+.about-container {
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 40px; /* Espacio interno */
+    max-width: 800px; /* Ancho máximo */
+    margin: 5px auto; /* Centrar contenedor */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-top: 100px;
+}
+
+.about-container h1, .about-container h2 {
+    color: #e91e63; /* Color para títulos */
+}
+
+.about-container ul {
+    padding-left: 20px; /* Indentación para listas */
+    list-style-type: disc; /* Estilo de lista */
+}
+
+.about-container p, .about-container li {
+    margin-bottom: 15px; /* Espacio entre párrafos y elementos de lista */
+}
+
+@media (max-width:499px){
+    .about-container{
+        margin-top: 10px;
+    }
+}
+/* Fin Informacion Acerca de nosotros */

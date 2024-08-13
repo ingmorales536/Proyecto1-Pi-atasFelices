@@ -1,0 +1,433 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Diseño de la barra de navegacion*/
+.top-bar h1 {
+    color: white;
+    
+}
+
+.top-bar {
+    background-color: #F195B2; 
+    color: white;
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322);
+}
+
+.top-bar h3 {
+    color: rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 10px;
+}
+
+.top-bar img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px;
+}
+
+/* Mejorar esta parte 26/07/24 */
+.top-bar img:hover{
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    background-color:#0000002c;
+    transition: 0.3s;
+}
+
+/* Estilos para los elementos de la navegación */
+.Items-Navegacion { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+}
+
+.Items-Navegacion li {
+    margin-right: 20px;
+}
+
+.Items-Navegacion li:last-child {
+    margin-right: 45px;
+}
+
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 499px) {
+    .top-bar {
+       display: flex;
+        
+    }
+
+    .Items-Navegacion {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: space-around; /* Distribuye uniformemente los elementos */
+    }
+
+    .Items-Navegacion li {
+        margin-right: 0px; /* Quita el margen derecho de los items */
+        margin-bottom: 5px; /* Agrega un margen inferior entre los elementos */
+       
+        
+    }
+
+    .Items-Navegacion li:last-child {
+        margin-bottom: 0; /* Quita el margen inferior del último elemento */
+        
+    }
+
+    .Items-Navegacion a {
+        font-size: 20px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+
+    .top-bar img {
+        margin-top: -10px;
+        width: 35px;
+        margin-left: 13px;
+    }
+
+    .top-bar img:hover{
+        width: 35px;
+    }
+
+    .top-bar h3 {
+        font-size: 15px;
+        margin-top: -2px;
+        margin-left: 5px;
+    }
+
+}
+
+/*Final de Contenido de los items(Barra superior) */
+
+
+
+/*Segunda barra de navegacion*/
+.navbar {
+    position: absolute; /* o relative, fixed, sticky */
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    z-index: 1000; /* Nivel alto para estar por encima */
+    border-radius: 40px;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.322); 
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 8px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.logo-container {
+    width: 116px; /* Puedes ajustar este valor según lo necesites */
+    height: 130px; /* Ajustar la altura según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+.navbar :hover {
+    transition: all .3s ease-in-out;
+    color:#e01958; 
+}
+/* pantalla para celulares medianos-grandes*/
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 13px;
+    }
+    .navbar {
+        margin-top: 10px;
+        width: 85%;
+        height: 30px;
+    }
+}
+/* pantalla para celulares pequeños*/
+@media (max-width: 499) {
+    .navbar a {
+        font-size:9px;
+    }
+    .navbar {
+        margin-top: 50px;
+        width: 85%;
+        height: 30px;
+    }
+  
+}
+/* Fin Segunda barra de navegacion*/
+
+
+/* Contenedor 1 de info*/
+.info-container {
+    margin-left: 200px;
+    margin-right: 90px;
+    margin-top: 200px;
+    display: flex; /* Utiliza Flexbox para disponer elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(204, 204, 204, 0.089);
+}
+
+.info1 {
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.info1 h1 {
+    margin: 0; /* Remueve el margen predeterminado del h1 */
+    font-size: 24px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    font-family: 'Playfair Display', serif; /* Fuente elegante para h1 */
+    font-size: 40px;
+}
+
+.info1 p {
+    margin: 14px 0 0; /* Margen entre el párrafo y otros elementos */
+    font-size: 16px; /* Tamaño del texto */
+    color: #555; /* Color del texto */
+    font-family: 'Roboto', sans-serif; /* Fuente limpia para párrafo */
+    font-size: 30px;
+}
+
+.image-container img {
+    max-width: 250px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+@media(max-width:799px){
+    .info-container {
+        margin-left: 40px;
+        margin-top: 150px;
+        margin-right: 50px;
+    }
+}
+
+
+@media (max-width: 499px) {
+    .info-container {
+        margin-left: 40px;
+        margin-top: 150px;
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: center; /* Alinea los elementos al centro */
+    }
+
+    .info1 {
+        margin-right: 0; /* Remueve el margen lateral */
+        text-align: center; /* Centra el texto */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ajusta la imagen al contenedor en pantallas pequeñas */
+    }
+
+    .info1 h1 {
+        font-size: 33px;
+    }
+    .info1 p {
+        font-size: 20px;
+    }
+}
+/* Fin Contenedor 1 de info*/
+
+/* Apartado para mandar correo*/
+.contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00458f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 769px) {
+    .contact-form {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 0px 0px 2px black;
+    }
+}
+
+@media (max-width: 499px) {
+    .contact-form {
+        width: 100%;
+        max-width: 270px;
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 0px 0px 2px black;
+    }
+}
+/* Fin Apartado para mandar correo*/
+
+
+
+/*Diseño del pie*/
+.Pie {
+    margin-top: 200px;
+    background-color: #f082a5; 
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 0px 6px black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Foot-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo-section {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+}
+
+.links-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.links-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}
+
+.links-section ul :hover {
+    color: black;
+}
+
+.Iconos-RedesSociales a {
+    margin: 0 10px;
+}
+
+.Iconos-RedesSociales img {
+    width: 37px;
+    height: auto;
+}
+
+@media (max-width: 756px) {
+    .Foot-Container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links-section ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Iconos-RedesSociales {
+        margin-top: 15px;
+    }
+
+    
+    .Iconos-RedesSociales img {
+        width: 37px;
+    }
+}
+
+
+@media (max-width: 499px) {
+
+    .links-section ul {
+        flex-direction: row;
+         
+    }
+    .links-section a {
+        font-size: 15px;
+    }
+
+    .Iconos-RedesSociales img {
+    
+        width: 37px;
+    }
+}
+
+
+/*Fin Diseño del pie*/
